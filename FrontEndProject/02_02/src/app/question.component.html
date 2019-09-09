@@ -1,0 +1,32 @@
+<md-card>
+    <md-card-title>
+        <span *ngIf="qq?.id">Edit Question</span>
+        <span *ngIf="!qq?.id">New Question</span>
+    </md-card-title>
+    <md-card-content>
+        <form>
+            <md-form-field class="fullWidth">
+                <input mdInput placeholder="text" [(ngModel)]="qq.text" name="text">
+            </md-form-field>
+            <md-form-field class="fullWidth">
+                <input mdInput placeholder="correctAnswer" [(ngModel)]="qq.correctAnswer" name="correctAnswer">
+            </md-form-field>
+            <md-form-field class="fullWidth">
+                <input mdInput placeholder="answer1" [(ngModel)]="qq.answer1" name="answer1">
+            </md-form-field>
+            <md-form-field class="fullWidth">
+                <input mdInput placeholder="answer2" [(ngModel)]="qq.answer2" name="answer2">
+            </md-form-field>
+            <md-form-field class="fullWidth">
+                <input mdInput placeholder="answer3" [(ngModel)]="qq.answer3" name="answer3">
+            </md-form-field>
+        </form>
+    </md-card-content>
+    <md-card-actions>
+        <button md-button *ngIf="!qq?.id" (click)="post(qq)">POST</button>
+        <button md-button *ngIf="qq?.id" (click)="put(qq)">Edit</button>
+        <button md-button *ngIf="qq?.id" (click)="qq={}">NEW</button>
+        <!-- <button md-button (click)="get()">GET</button> -->
+    </md-card-actions>
+</md-card>
+<app-questions ></app-questions>
