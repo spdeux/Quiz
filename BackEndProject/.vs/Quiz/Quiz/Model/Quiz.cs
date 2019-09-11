@@ -9,5 +9,9 @@ namespace Quiz.Model
     {
         public int? Id { get; set; }
         public string Title { get; set; }
+
+        #region save creatorId or userId in quize object
+        public string OwnerId { get; set; }
+        #endregion
     }
 }

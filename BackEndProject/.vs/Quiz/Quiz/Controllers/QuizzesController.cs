@@ -25,10 +25,15 @@ namespace Quiz.Controllers
         }
 
         // GET: api/Quizzes
+        [Authorize]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Model.Quiz>>> GetQuiz()
+        public IEnumerable<Model.Quiz> GetQuiz()
         {
-            return await _context.Quiz.ToListAsync();
+            #region Retrive userId from claim
+            var userId = HttpContext.User.Claims.First().Value;
+            #endregion
+
+            return _context.Quiz.Where(q => q.OwnerId == userId);
         }
 
         // GET: api/Quizzes/5
@@ -80,6 +85,11 @@ namespace Quiz.Controllers
         [HttpPost]
         public async Task<ActionResult<Model.Quiz>> PostQuiz(Model.Quiz quiz)
         {
+            #region Retrive userId from claim
+            var userId = HttpContext.User.Claims.First().Value;
+            quiz.OwnerId = userId;
+            #endregion
+
             _context.Quiz.Add(quiz);
             await _context.SaveChangesAsync();
 

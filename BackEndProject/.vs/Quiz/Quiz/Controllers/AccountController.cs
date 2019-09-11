@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
@@ -37,12 +38,19 @@ namespace Quiz.Controllers
 
             await signInManager.SignInAsync(user, isPersistent: false); //because we don't use cookie and be stateless so we set ispersistent:false
 
+            #region Save userId in Token, so we should use Claim to keep userId and then pass it to JwtSecurityToken
+            var claims = new Claim[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub,user.Id)
+            };
+            #endregion
+
             #region Sign in Token with the same Key which used in Startup class and then pass it to JwtSecurityToken
             var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is a secret pharase"));
             var signingCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
             #endregion
 
-            var jwt = new JwtSecurityToken(signingCredentials: signingCredentials);
+            var jwt = new JwtSecurityToken(signingCredentials: signingCredentials, claims: claims);
             var token = new JwtSecurityTokenHandler().WriteToken(jwt);
 
             return Ok(new JsonResult(token));
