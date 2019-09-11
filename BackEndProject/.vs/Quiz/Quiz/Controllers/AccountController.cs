@@ -37,7 +37,27 @@ namespace Quiz.Controllers
                 return BadRequest(result.Errors);
 
             await signInManager.SignInAsync(user, isPersistent: false); //because we don't use cookie and be stateless so we set ispersistent:false
+            var token = CreateToken(user);
 
+            return Ok(new JsonResult(token));
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] Credentials credentials)
+        {
+            var result = await signInManager.PasswordSignInAsync(credentials.Email, credentials.Password, false, false);
+
+            if (!result.Succeeded)
+                return BadRequest();
+
+            var user = await userManager.FindByEmailAsync(credentials.Email);
+            var token = CreateToken(user);
+
+            return Ok(new JsonResult(token));
+        }
+
+        private string CreateToken(IdentityUser user)
+        {
             #region Save userId in Token, so we should use Claim to keep userId and then pass it to JwtSecurityToken
             var claims = new Claim[]
             {
@@ -53,7 +73,7 @@ namespace Quiz.Controllers
             var jwt = new JwtSecurityToken(signingCredentials: signingCredentials, claims: claims);
             var token = new JwtSecurityTokenHandler().WriteToken(jwt);
 
-            return Ok(new JsonResult(token));
+            return token;
         }
     }
 }

@@ -18,6 +18,7 @@ import { NavComponent } from './nav/nav.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes = [
@@ -26,12 +27,13 @@ const routes = [
   { path: "question/:quizId", component: QuestionComponent },
   { path: "questions", component: QuestionsComponent },
   { path: "quiz", component: QuizComponent },
-  { path: "register", component: RegisterComponent }
+  { path: "register", component: RegisterComponent },
+  { path: "login", component: LoginComponent }
 ]
 
 @NgModule({
   declarations: [
-    AppComponent, QuestionComponent, QuestionsComponent, HomeComponent, NavComponent, QuizComponent, QuizzesComponent, RegisterComponent
+    AppComponent, QuestionComponent, QuestionsComponent, HomeComponent, NavComponent, QuizComponent, QuizzesComponent, RegisterComponent, LoginComponent
   ],
   imports: [
     BrowserModule,
