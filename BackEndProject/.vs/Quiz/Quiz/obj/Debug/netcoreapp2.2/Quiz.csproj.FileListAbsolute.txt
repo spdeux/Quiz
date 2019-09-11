@@ -12,3 +12,17 @@ E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular AS
 E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\BackEndProject\.vs\Quiz\Quiz\bin\Debug\netcoreapp2.2\Quiz.pdb
 E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.dll
 E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.pdb
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\bin\Debug\netcoreapp2.2\Quiz.deps.json
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\bin\Debug\netcoreapp2.2\Quiz.runtimeconfig.json
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\bin\Debug\netcoreapp2.2\Quiz.runtimeconfig.dev.json
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\bin\Debug\netcoreapp2.2\Quiz.dll
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\bin\Debug\netcoreapp2.2\Quiz.pdb
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.csprojAssemblyReference.cache
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.csproj.CoreCompileInputs.cache
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.RazorAssemblyInfo.cache
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.RazorAssemblyInfo.cs
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.AssemblyInfoInputs.cache
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.AssemblyInfo.cs
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.RazorTargetAssemblyInfo.cache
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.dll
+E:\Learning\Programing\00.2019\Lynda.com - Building Applications with Angular ASP.NET Core and Entity Framework Core\QuizProject\Quiz\BackEndProject\.vs\Quiz\Quiz\obj\Debug\netcoreapp2.2\Quiz.pdb

@@ -6,10 +6,10 @@ import { Observable } from "rxjs";
 export class CustomInterceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        // console.log('spduex say hey....')
-        request = request.clone({
-            withCredentials: true
-        });
+       
+        // request = request.clone({
+        //     withCredentials: true
+        // });
 
         return next.handle(request);
     }

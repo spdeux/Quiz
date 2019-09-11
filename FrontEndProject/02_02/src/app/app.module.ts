@@ -6,28 +6,32 @@ import { MdButtonModule, MdInputModule, MdCardModule, MdListModule, MdToolbarMod
 
 import { AppComponent } from './app.component'
 import { QuestionComponent } from './question.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { ApiService } from './api/api.service'
-import { CustomInterceptor } from './api/Custom';
+import { AuthService } from "./auth/auth.service";
+import { AuthInterceptorService } from "./auth-interceptor/auth-interceptor.service";
 import { QuestionsComponent } from './questions/questions.component'
 import { RouterModule } from "@angular/router";
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
+import { RegisterComponent } from './register/register.component';
+
 
 const routes = [
   { path: "", component: HomeComponent },
   { path: "question", component: QuestionComponent },
   { path: "question/:quizId", component: QuestionComponent },
   { path: "questions", component: QuestionsComponent },
-  { path: "quiz", component: QuizComponent }
+  { path: "quiz", component: QuizComponent },
+  { path: "register", component: RegisterComponent }
 ]
 
 @NgModule({
   declarations: [
-    AppComponent, QuestionComponent, QuestionsComponent, HomeComponent, NavComponent, QuizComponent, QuizzesComponent
+    AppComponent, QuestionComponent, QuestionsComponent, HomeComponent, NavComponent, QuizComponent, QuizzesComponent, RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -36,19 +40,20 @@ const routes = [
     MdInputModule,
     MdCardModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MdListModule,
     MdToolbarModule,
     RouterModule.forRoot(routes)
-
   ],
   providers: [
     ApiService,
-    // {
-    //   provide: HTTP_INTERCEPTORS,
-    //   useClass: CustomInterceptor ,
-    //   multi: true
-    // }
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService ,
+      multi: true //it indicates that we can use multiple httpInterceptors
+    }
 
   ],
   bootstrap: [AppComponent]
