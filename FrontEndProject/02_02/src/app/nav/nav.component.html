@@ -2,7 +2,7 @@
   <button md-button routerLink="/quiz">Quiz</button>
   <!-- <button md-button routerLink="/question">Question</button> -->
   <span style="flex: 1 1 auto;"></span>
-  <button md-button routerLink="/register">Register</button>
-  <button md-button routerLink="/login">Login</button>
+  <button md-button *ngIf="!authService.isAuthenticated" routerLink="/register">Register</button>
+  <button md-button *ngIf="!authService.isAuthenticated" routerLink="/login">Login</button>
   <button md-button *ngIf="authService.isAuthenticated" (click)="logout()">Logout</button>
 </md-toolbar>
