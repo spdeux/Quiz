@@ -4,4 +4,5 @@
   <span style="flex: 1 1 auto;"></span>
   <button md-button routerLink="/register">Register</button>
   <button md-button routerLink="/login">Login</button>
+  <button md-button *ngIf="authService.isAuthenticated" (click)="logout()">Logout</button>
 </md-toolbar>

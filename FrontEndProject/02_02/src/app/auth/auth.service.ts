@@ -21,5 +21,13 @@ export class AuthService {
     return this.http.post<any>(this.loginUrl, credential);
   }
 
- 
+  logout() {
+    localStorage.removeItem('token');
+  }
+
+  get isAuthenticated() {
+    return !!localStorage.getItem('token');
+  }
+
+
 }
