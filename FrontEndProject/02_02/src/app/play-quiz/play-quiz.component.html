@@ -1,0 +1,28 @@
+<md-card>
+  <md-card-content>
+    <md-expansion-panel *ngFor="let question of questions;let i=index" [expanded]="step === i" (opened)="setStep(i)"
+      hideToggle>
+      <md-expansion-panel-header>
+        <md-panel-title>
+          {{question.text}}
+        </md-panel-title>
+        <md-panel-description>
+        </md-panel-description>
+      </md-expansion-panel-header>
+      <!-- {{question.correctAnswer}} -->
+      <md-radio-group aria-labelledby="example-radio-group-label" 
+        [(ngModel)]="question.selectedAnswer">
+        <md-radio-button class="fullWidth" *ngFor="let answer of question.answers" [value]="answer">
+          {{answer}}
+        </md-radio-button>
+      </md-radio-group>
+      <md-action-row>
+        <button md-button color="primary" (click)="nextStep()">Next</button>
+      </md-action-row>
+    </md-expansion-panel>
+
+  </md-card-content>
+  <md-card-actions>
+    <button md-button color="primary" (click)="finish()">Finish</button>
+  </md-card-actions>
+</md-card>

@@ -52,6 +52,10 @@ export class ApiService {
   putQuiz(quiz: Quiz) {
     return this.http.put(this.quizUrl + `/${quiz.id}`, quiz);
   }
+ 
+  getAllQuizzes() {
+    return this.http.get(this.quizUrl + '/all');
+  }
 
   //   prepareHeader() {
   //   //  this.headers.append("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
@@ -59,6 +63,8 @@ export class ApiService {
   //   // this.headers.append("Access-Control-Allow-Credentials","true");
   //   // this.headers.append("Access-Control-Allow-Headers", 'X-Requested-With,content-type');
   // }
+
+
 
 
 }

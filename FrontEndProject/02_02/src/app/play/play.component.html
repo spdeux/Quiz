@@ -1,0 +1,10 @@
+<md-card>
+  <md-card-content>
+    <md-list *ngFor="let quiz of quizzes">
+      <md-list-item  class="clickLink" [routerLink]="['/playQuiz',quiz?.id]">{{quiz.title}}</md-list-item>
+    </md-list>
+  </md-card-content>
+  <md-card-actions>
+
+  </md-card-actions>
+</md-card>

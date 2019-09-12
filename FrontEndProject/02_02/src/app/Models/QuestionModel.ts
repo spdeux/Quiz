@@ -6,4 +6,6 @@ export class Question {
     public answer2: string;
     public answer3: string;
     public quizId: number;
+    public answers;
+    public selectedAnswer;
 }
